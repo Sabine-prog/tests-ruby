@@ -48,6 +48,17 @@ describe "#translate" do
 
   # Test-driving bonus:
   # * write a test asserting that capitalized words are still capitalized (but with a different initial capital letter, of course)
+  it "translates many words capitalized or not" do
+    s = translate("many words are not Capitalized but Some Words are")
+    expect(s).to eq("anymay ordsway areay otnay Apitalizedcay butay Omesay Ordsway areay")
+  end
+
+  # Optional test - SVi : 
+  it "translates many words without vowels" do
+    s = translate("many words bbbbbb lkjhgfrtp qqqqqqqqqqqqqq")
+    expect(s).to eq("anymay ordsway bbbbbbay lkjhgfrtpay qqqqqqqqqqqqqqay")
+  end
+
   # * retain the punctuation from the original phrase
 
 end

@@ -32,6 +32,8 @@ describe "Simon says" do
     # Hint: *default values* https://www.skorks.com/2009/08/method-arguments-in-ruby/
     it "should repeat a number of times" do
       expect(repeat("hello", 3)).to eq("hello hello hello")
+      # optional test on optional argument
+      expect(repeat("hello")).to eq("hello hello")
     end
   end
 
